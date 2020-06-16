@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Удаление</title>
+</head>
+{% extends 'b2.html' %}
+
+{% block content %}
+<body>
+    <h1>Удаление записи</h1>
+    <form action="" method="post">{% csrf_token %}
+        <p>Вы точно хотите удалить запись " {{ post.title }}" ?</p>
+        <input type="submit" value="Подтвердить" />
+
+    </form>
+</body>
+{% endblock content %}
+</html>

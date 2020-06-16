@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="ru">
+<header>
+    <meta charset="UTF-8">
+    <a href="{% url 'home' %}">Главная</a> | <a href="{% url 'learn' %}">Развивач</a> | <a href="{% url 'shop' %}">Список магазинов</a>
+</header>
+    <div>
+        {% block content %}
+        {% endblock content %}
+    </div>
+</html>

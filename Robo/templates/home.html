@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Новости</title>
+</head>
+<body>
+
+{% extends 'b2.html' %}
+
+
+
+{% block content %}
+
+<H1>Новости</H1>
+
+    {% for Post in object_list %}
+        <div class="post-entry">
+        <h2><a href="{% url 'post_detail' Post.pk %}">{{ Post.title }}</a></h2>
+        <p>{{ Post.body }}</p>
+        </div>
+    {% endfor %}
+{% endblock content %}
+
+</body>
+</html>
