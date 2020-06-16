@@ -1,0 +1,1 @@
+web: gunicorn Robo_project.wsgi --log-file -
